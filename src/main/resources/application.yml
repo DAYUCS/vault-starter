@@ -1,20 +1,10 @@
 spring:
-  application:
-    name: vault-starter
-  cloud:
-    vault:
-      uri: http://localhost:8200
-      token: '00000000-0000-0000-0000-000000000000'
-      postgresql:
-        enabled: true
-        role: readonly
-        backend: postgresql
-        username-property: spring.datasource.username
-        password-property: spring.datasource.password
-  datasource:
-    url: jdbc:postgresql://localhost:5432/testuser
   jpa:
     properties:
       hibernate:
-        ddl-auto: create-drop
         dialect: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: jdbc:postgresql://localhost:5432/testuser
+    hikari:
+      max-lifetime: 30000
+      minimum-idle: 2

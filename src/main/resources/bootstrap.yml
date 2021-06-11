@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: vault-starter
+  cloud:
+    vault:
+#      enabled: false
+      scheme: http
+      uri: http://localhost:8200
+      token: 00000000-0000-0000-0000-000000000000
+      fail-fast: false
+      database:
+        enabled: true
+        role: readonly
