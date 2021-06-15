@@ -7,3 +7,4 @@ spring:
     url: jdbc:postgresql://localhost:5432/testuser
     hikari:
       minimum-idle: 2
+      max-lifetime: 120
